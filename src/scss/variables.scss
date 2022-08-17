@@ -1,0 +1,28 @@
+$black: #000;
+$purple: #5036e6;
+$white: #fff;
+$lightGreen: #009465;
+$darkGreen: #066c4c;
+$lightBlack: rgba(26, 26, 26, 0.6);
+$darkBlack: #1a1a1a;
+$gray: #8E9199;
+
+$longLake: #68757e;
+$vintage: #D8CEB9;
+
+
+$primaryBackground: $black;
+$secondBackground: $purple;
+
+$displaySize: (
+  'mobile': 320px,
+  'tablet': 768px,
+  'desktop': 1440px
+);
+
+$elementSize: (
+  'mobile': 280px,
+  'photo' : 320px,
+  'board' : 416px,
+  'tablet': 500px,
+);
