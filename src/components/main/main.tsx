@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../services/hooks";
 import style from "./main.module.css";
 import { setRequest } from "../../services/reducers/apiSlice";
 import { getSet } from "../../services/actions/getSet";
+import { murderAtCastleNathria } from "../../utils/constants";
 
 export const Main = () => {
   const dispatch = useAppDispatch();
@@ -10,12 +11,12 @@ export const Main = () => {
 
   useEffect(() => {
     // dispatch(setRequest())
-    // dispatch(getSet())
+    // dispatch(getSet(murderAtCastleNathria))
   }, []);
 
-useEffect(() => {
-   console.log(store.set.set)
-})
+  useEffect(() => {
+    console.log(store.set.set);
+  });
 
   return <div className={style.main}></div>;
 };

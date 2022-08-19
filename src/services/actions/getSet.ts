@@ -7,6 +7,7 @@ import { setFail, setSuccess, setRequest } from "../reducers/apiSlice";
 import { checkResponse } from "../../utils/check-response";
 import { getSetAction } from "../reducers/set";
 
+
 const options = {
   method: "GET",
   headers: {
@@ -15,17 +16,19 @@ const options = {
   },
 };
 
-export const getSet: AppThunk = () => (dispatch) => {
+export const getSet: AppThunk = (set: string) => (dispatch) => {
   dispatch(setRequest());
   fetch(
-    "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/sets/Murder%20at%20Castle%20Nathria?locale=ruRU",
+    `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/sets/${set}?locale=ruRU`,
     options
   )
     .then(checkResponse)
     .then((response) => {
       dispatch(setSuccess());
-      dispatch(getSetAction(response));
-      console.log(response);
+      const filtered = response.filter(
+        (item: any) => item?.collectible === true
+      );
+      dispatch(getSetAction(filtered));
     })
     .catch((err) => {
       dispatch(setFail());
