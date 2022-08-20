@@ -2,6 +2,10 @@
 
 .main {
   background-color: $vintage;
-  height: 1000px;
+  height: 100wh;
   width: 100%;
+  & ul {
+    display: grid;
+    grid-template-columns: repeat(3, 375px);
+  }
 }

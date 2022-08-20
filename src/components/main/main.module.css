@@ -1,5 +1,9 @@
 .main {
   background-color: #D8CEB9;
-  height: 1000px;
+  height: 100wh;
   width: 100%;
+}
+.main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 375px);
 }/*# sourceMappingURL=main.module.css.map */
