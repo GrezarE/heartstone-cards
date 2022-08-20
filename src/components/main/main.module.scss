@@ -4,8 +4,17 @@
   background-color: $vintage;
   height: 100wh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 1050px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #8585ad #2f2f37;
+
   & ul {
     display: grid;
     grid-template-columns: repeat(3, 375px);
+    margin: 0;
+    padding: 0;
   }
 }
