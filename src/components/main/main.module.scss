@@ -5,8 +5,8 @@
   height: 100wh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  max-height: 1050px;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: #8585ad #2f2f37;
@@ -16,5 +16,15 @@
     grid-template-columns: repeat(3, 375px);
     margin: 0;
     padding: 0;
+    max-height: 1050px;
+    justify-content: center;
+    column-gap: 50px;
+  }
+  &::-webkit-scrollbar {
+    background-color: #2f2f37;
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8585ad;
   }
 }

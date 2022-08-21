@@ -1,6 +1,21 @@
 .header {
   background-color: #68757e;
-  height: 50px;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.header::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  background-image: url("../../images/pngegg.png");
+  background-repeat: no-repeat;
+  background-size: 90% 650px;
+  background-position: center;
+  height: 100%;
   width: 100%;
 }
 .header h1 {

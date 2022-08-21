@@ -1,5 +1,9 @@
 .form {
-  width: 300px;
+  width: 100%;
   background-color: #a6aeaa;
-  height: 100vh;
+  height: 50px;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }/*# sourceMappingURL=select-form.module.css.map */

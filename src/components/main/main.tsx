@@ -29,11 +29,11 @@ export const Main = () => {
 
   return (
     <div className={style.main}>
+      <SelectForm />
       <ul>
         {set &&
           set.map((item, index) => <Card cardImage={item.img} key={index} />)}
       </ul>
-      <SelectForm />
     </div>
   );
 };

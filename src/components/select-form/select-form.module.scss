@@ -1,6 +1,10 @@
 @import "../../scss/variables.scss";
 
 .form {
-  width: 300px;
+  width: 100%;
   background-color: $silverScreen;
+  height: 50px;
+  display: flex;
+  position: sticky;
+  top: 0;
 }
