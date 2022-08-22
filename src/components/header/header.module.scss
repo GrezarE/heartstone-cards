@@ -4,10 +4,7 @@
   background-color: $longLake;
   height: 200px;
   width: 100%;
-  // background-image: url('../../images/3dC1Bp29JnI.jpg');
-  // background-repeat: no-repeat;
-  // background-size: 100% 200px;
-  // background-position: center;
+
   position: relative;
   z-index: 1;
   &::before {
@@ -16,8 +13,7 @@
     position: absolute;
     left: 0;
     top: -10px;
-    // background-image: url("../../images/3dC1Bp29JnI.jpg");
-    background-image: url("../../images/pngegg.png");
+    background-image: url("../../images/header.png");
     background-repeat: no-repeat;
     background-size: 90% 650px;
     background-position: center;

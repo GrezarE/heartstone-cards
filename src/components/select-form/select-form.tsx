@@ -6,6 +6,8 @@ export const SelectForm = () => {
   return (
     <form className={style.form}>
       <SetSelect />
+      {/* <SetSelect />
+      <SetSelect /> */}
     </form>
   );
 };

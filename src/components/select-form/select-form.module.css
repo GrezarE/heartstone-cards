@@ -6,4 +6,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  justify-content: center;
+  padding: 0 10px 0 10px;
+  gap: 40px;
 }/*# sourceMappingURL=select-form.module.css.map */

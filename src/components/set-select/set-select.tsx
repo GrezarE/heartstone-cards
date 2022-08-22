@@ -9,10 +9,10 @@ import {
   core,
 } from "../../utils/constants";
 import { setSelectorSet } from "../../services/reducers/selectorSlice";
+import style from "./set-select.module.css";
 
 export const SetSelect = () => {
   const dispatch = useAppDispatch();
-  const ref = useRef();
   const [value, setValue] = useState<string>();
 
   useEffect(() => {
@@ -21,7 +21,6 @@ export const SetSelect = () => {
 
   useEffect(() => {
     if (value) {
-      console.log(value);
       dispatch(setSelectorSet(value));
     }
   }, [value]);
@@ -30,20 +29,20 @@ export const SetSelect = () => {
     setValue(evt.target.value);
   };
 
-  useEffect(() => {
-    console.log(value);
-  }, [value]);
-
   return (
-    <select value={value} onChange={changeValue}>
-      <option value={murderAtCastleNathria}>Murder at Castle Nathria</option>
-      <option value={forgedInTheBarrens}>Forged in the Barrens</option>
-      <option value={unitedInStormwind}>United in Stormwind</option>
-      <option value={fracturedInAlteracValley}>
-        Fractured in Alterac Valley
-      </option>
-      <option value={voyageToTheSunkenCity}>Voyage to the Sunken City</option>
-      <option value={core}>Core</option>
-    </select>
+    <div className={style.box}>
+      <label htmlFor="sets">Sets:</label>
+
+      <select id="sets" value={value} onChange={changeValue}>
+        <option value={murderAtCastleNathria}>Murder at Castle Nathria</option>
+        <option value={forgedInTheBarrens}>Forged in the Barrens</option>
+        <option value={unitedInStormwind}>United in Stormwind</option>
+        <option value={fracturedInAlteracValley}>
+          Fractured in Alterac Valley
+        </option>
+        <option value={voyageToTheSunkenCity}>Voyage to the Sunken City</option>
+        <option value={core}>Core</option>
+      </select>
+    </div>
   );
 };
