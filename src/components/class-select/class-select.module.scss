@@ -1,0 +1,15 @@
+@import "../../scss/variables.scss";
+
+
+.box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  & select {
+    width: 100%;
+    height: 90%;
+    background-color: $vintage;
+    border: 1px $longLake solid;
+    border-radius: 5px;
+  }
+}

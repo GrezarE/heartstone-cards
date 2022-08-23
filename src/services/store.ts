@@ -5,6 +5,7 @@ import { apiReducer } from "./reducers/apiSlice";
 import { setReducer } from "./reducers/set";
 import { selectorReducer } from "./reducers/selectorSlice";
 import { loaderReducer } from "./reducers/loaderSlice";
+import { classReducer } from "./reducers/classSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     set: setReducer,
     selector: selectorReducer,
     loader: loaderReducer,
+    class: classReducer,
   },
   middleware: [thunk],
   devTools: process.env.NODE_ENV !== "production",

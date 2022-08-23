@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface ICard {
+export interface ICard {
   cardId?: string;
   dbfId?: string;
   name?: string;
@@ -19,10 +19,12 @@ interface ICard {
 
 interface ISetTypes {
   set: ICard[] | null;
+  filteredSet: ICard[] | null;
 }
 
 const initialState: ISetTypes = {
   set: [],
+  filteredSet: [],
 };
 
 export const setSlice = createSlice({
@@ -33,8 +35,12 @@ export const setSlice = createSlice({
       ...store,
       set: action.payload,
     }),
+    setFilteredSet: (store, action: PayloadAction<any>) => ({
+      ...store,
+      filteredSet: action.payload,
+    }),
   },
 });
 
-export const { getSetAction } = setSlice.actions;
+export const { getSetAction, setFilteredSet } = setSlice.actions;
 export const setReducer = setSlice.reducer;

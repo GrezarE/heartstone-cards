@@ -9,7 +9,33 @@ const forgedInTheBarrens: "Forged%20in%20the%20Barrens" =
   "Forged%20in%20the%20Barrens";
 const core: "%22Core%22" = "%22Core%22";
 
+// interface IClass {
+//   demonHunter: "Demon Hunter";
+//   druid: "Druid";
+//   hunter: "Hunter";
+//   mage: "Mage";
+//   paladin: "Paladin";
+//   priest: "Priest";
+//   rogue: "Rogue";
+//   shaman: "Shaman";
+//   warlock: "Warlock";
+//   warrior: "Warrior";
+//   neutral: "Neutral";
+// }
 
+const classList = {
+  demonHunter: "Demon Hunter",
+  druid: "Druid",
+  hunter: "Hunter",
+  mage: "Mage",
+  paladin: "Paladin",
+  priest: "Priest",
+  rogue: "Rogue",
+  shaman: "Shaman",
+  warlock: "Warlock",
+  warrior: "Warrior",
+  neutral: "Neutral",
+};
 
 export {
   murderAtCastleNathria,
@@ -18,4 +44,5 @@ export {
   unitedInStormwind,
   forgedInTheBarrens,
   core,
+  classList,
 };

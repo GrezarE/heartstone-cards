@@ -1,11 +1,13 @@
 import React from "react";
 import style from "./select-form.module.css";
 import { SetSelect } from "../set-select/set-select";
+import { ClassSelect } from "../class-select/class-select";
 
 export const SelectForm = () => {
   return (
-    <form className={style.form}>
+    <div className={style.form}>
       <SetSelect />
-    </form>
+      <ClassSelect />
+    </div>
   );
 };

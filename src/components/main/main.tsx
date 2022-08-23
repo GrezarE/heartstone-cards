@@ -6,15 +6,28 @@ import { murderAtCastleNathria } from "../../utils/constants";
 import { Card } from "../card/card";
 import { SelectForm } from "../select-form/select-form";
 import { Loader } from "../loader/loader";
+import { ICard, setFilteredSet } from "../../services/reducers/set";
 
 export const Main = () => {
   const dispatch = useAppDispatch();
   const set = useAppSelector((store) => store.set.set);
+  const filteredSet = useAppSelector((store) => store.set.filteredSet);
   const selection = useAppSelector((store) => store.selector);
   const loader = useAppSelector((store) => store.loader.loading);
-  // const setCollect = set?.map((item) => item);
+  const className = useAppSelector((store) => store.class.className);
 
   const setSelect = selection.set;
+
+  const classFilter = (className: string) => {
+    let cards;
+
+    cards = set?.filter(
+      (item) =>
+        item.playerClass ===
+        (className === "All" ? item.playerClass : className)
+    );
+    return cards;
+  };
 
   useEffect(() => {
     if (setSelect) {
@@ -23,22 +36,20 @@ export const Main = () => {
   }, [setSelect]);
 
   useEffect(() => {
-    console.log(set);
-  });
-  useEffect(() => {
-    console.log(setSelect);
-  }, [setSelect]);
+    dispatch(setFilteredSet(classFilter(className)));
+  }, [className, set]);
 
-  useEffect(() => {
-    console.log(loader);
-  }, [loader]);
 
   return (
     <div className={style.main}>
       <SelectForm />
       <ul>
-        {set &&
-          set.map((item, index) => <Card cardImage={item.img} key={index} />)}
+        {filteredSet &&
+          filteredSet.map((item, index) => (
+            <Card cardImage={item.img} key={index} />
+          ))}
+        {/* {set &&
+          set.map((item, index) => <Card cardImage={item.img} key={index} />)} */}
       </ul>
       {loader && <Loader />}
     </div>
