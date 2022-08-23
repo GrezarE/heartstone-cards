@@ -6,7 +6,7 @@ import { ThunkAction } from "redux-thunk";
 import { setFail, setSuccess, setRequest } from "../reducers/apiSlice";
 import { checkResponse } from "../../utils/check-response";
 import { getSetAction } from "../reducers/set";
-
+import { setLoaderFalse, setLoaderTrue } from "../reducers/loaderSlice";
 
 const options = {
   method: "GET",
@@ -18,6 +18,7 @@ const options = {
 
 export const getSet: AppThunk = (set: string) => (dispatch) => {
   dispatch(setRequest());
+  dispatch(setLoaderTrue());
   fetch(
     `https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/sets/${set}?locale=ruRU`,
     options
@@ -29,9 +30,11 @@ export const getSet: AppThunk = (set: string) => (dispatch) => {
         (item: any) => item?.collectible === true
       );
       dispatch(getSetAction(filtered));
+      dispatch(setLoaderFalse());
     })
     .catch((err) => {
       dispatch(setFail());
+      dispatch(setLoaderFalse());
       console.error(err);
     });
 };

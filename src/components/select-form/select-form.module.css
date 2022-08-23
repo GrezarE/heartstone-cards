@@ -1,5 +1,4 @@
 .form {
-  width: 100%;
   background-color: #a6aeaa;
   height: 50px;
   display: flex;
@@ -9,4 +8,5 @@
   justify-content: center;
   padding: 0 10px 0 10px;
   gap: 40px;
+  z-index: 10;
 }/*# sourceMappingURL=select-form.module.css.map */

@@ -4,9 +4,15 @@ import { Action, ActionCreator, AnyAction } from "redux";
 import { apiReducer } from "./reducers/apiSlice";
 import { setReducer } from "./reducers/set";
 import { selectorReducer } from "./reducers/selectorSlice";
+import { loaderReducer } from "./reducers/loaderSlice";
 
 export const store = configureStore({
-  reducer: { api: apiReducer, set: setReducer, selector: selectorReducer },
+  reducer: {
+    api: apiReducer,
+    set: setReducer,
+    selector: selectorReducer,
+    loader: loaderReducer,
+  },
   middleware: [thunk],
   devTools: process.env.NODE_ENV !== "production",
 });
