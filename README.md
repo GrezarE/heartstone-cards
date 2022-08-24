@@ -1,12 +1,19 @@
 # HeartStone Standart Cards
 
-[Hearthstone API Documentation](https://rapidapi.com/omgvamp/api/hearthstone/)
+Запрашивает c API и выводит карточки сетов стандарта игры Heartstone.
+Карточки сортируются по сетам и классам.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Стек
 
-## Available Scripts
+* TypeScript
+* CSS Modules + SCSS
+* Redux Toolkit
+* Hooks
+* [Hearthstone API Documentation](https://rapidapi.com/omgvamp/api/hearthstone/)
+* [Create React App](https://github.com/facebook/create-react-app)
 
-
-### `npm start`
-### `npm run build`
+## Планы
+* Приближение карточек
+* Сортировка по редкости
+* Сортировка по стоимости
 

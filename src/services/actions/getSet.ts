@@ -1,8 +1,4 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppThunk, AppDispatch } from "../store";
-import { RootState } from "../store";
-import { AnyAction } from "redux";
-import { ThunkAction } from "redux-thunk";
+import { AppThunk } from "../store";
 import { setFail, setSuccess, setRequest } from "../reducers/apiSlice";
 import { checkResponse } from "../../utils/check-response";
 import { getSetAction } from "../reducers/set";

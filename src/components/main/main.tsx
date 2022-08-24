@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../services/hooks";
 import style from "./main.module.css";
 import { getSet } from "../../services/actions/getSet";
-import { murderAtCastleNathria } from "../../utils/constants";
 import { Card } from "../card/card";
 import { SelectForm } from "../select-form/select-form";
 import { Loader } from "../loader/loader";
-import { ICard, setFilteredSet } from "../../services/reducers/set";
+import { setFilteredSet } from "../../services/reducers/set";
 
 export const Main = () => {
   const dispatch = useAppDispatch();
@@ -33,12 +32,11 @@ export const Main = () => {
     if (setSelect) {
       dispatch(getSet(setSelect));
     }
-  }, [setSelect]);
+  }, [setSelect, dispatch]);
 
   useEffect(() => {
     dispatch(setFilteredSet(classFilter(className)));
-  }, [className, set]);
-
+  }, [className, set, dispatch]);
 
   return (
     <div className={style.main}>

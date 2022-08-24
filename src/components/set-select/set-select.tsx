@@ -1,5 +1,5 @@
-import React, { ChangeEventHandler, useEffect, useRef, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../services/hooks";
+import React, { useEffect,  useState } from "react";
+import { useAppDispatch } from "../../services/hooks";
 import {
   murderAtCastleNathria,
   voyageToTheSunkenCity,
@@ -23,7 +23,7 @@ export const SetSelect = () => {
     if (value) {
       dispatch(setSelectorSet(value));
     }
-  }, [value]);
+  }, [value, dispatch]);
 
   const changeValue = (evt: any) => {
     setValue(evt.target.value);

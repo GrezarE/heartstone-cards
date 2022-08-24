@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import thunk, { ThunkAction } from "redux-thunk";
-import { Action, ActionCreator, AnyAction } from "redux";
+import { Action, ActionCreator } from "redux";
 import { apiReducer } from "./reducers/apiSlice";
 import { setReducer } from "./reducers/set";
 import { selectorReducer } from "./reducers/selectorSlice";
@@ -24,10 +24,3 @@ export type AppDispatch = typeof store.dispatch;
 export type AppThunk<TReturn = void> = ActionCreator<
   ThunkAction<TReturn, RootState, unknown, Action>
 >;
-
-// export type AppThunk<ReturnType = void> = ThunkAction<
-//   ReturnType,
-//   RootState,
-//   unknown,
-//   AnyAction
-// >;

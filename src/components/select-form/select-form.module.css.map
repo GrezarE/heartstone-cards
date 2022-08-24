@@ -1,1 +1,1 @@
-{"version":3,"sources":["select-form.module.scss","../../scss/variables.scss","select-form.module.css"],"names":[],"mappings":"AAEA;EAEE,yBCFa;EDGb,YAAA;EACA,aAAA;EACA,wBAAA;EAAA,gBAAA;EACA,MAAA;EACA,uBAAA;EACA,sBAAA;EACA,SAAA;EACA,WAAA;AEFF","file":"select-form.module.css"}
+{"version":3,"sources":["select-form.module.scss","../../scss/variables.scss","select-form.module.css"],"names":[],"mappings":"AAEA;EACE,yBCDa;EDEb,YAAA;EACA,aAAA;EACA,wBAAA;EAAA,gBAAA;EACA,MAAA;EACA,uBAAA;EACA,sBAAA;EACA,SAAA;EACA,WAAA;AEDF","file":"select-form.module.css"}
