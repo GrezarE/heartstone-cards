@@ -37,6 +37,20 @@ const classList: IClass = {
   neutral: "Neutral",
 };
 
+interface IqualitiesList {
+  common: "Common";
+  rare: "Rare";
+  epic: "Epic";
+  legendary: "Legendary";
+}
+
+const qualitiesList: IqualitiesList = {
+  common: "Common",
+  rare: "Rare",
+  epic: "Epic",
+  legendary: "Legendary",
+};
+
 export {
   murderAtCastleNathria,
   voyageToTheSunkenCity,
@@ -45,4 +59,5 @@ export {
   forgedInTheBarrens,
   core,
   classList,
+  qualitiesList,
 };

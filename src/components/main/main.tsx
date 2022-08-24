@@ -11,20 +11,24 @@ export const Main = () => {
   const dispatch = useAppDispatch();
   const set = useAppSelector((store) => store.set.set);
   const filteredSet = useAppSelector((store) => store.set.filteredSet);
-  const selection = useAppSelector((store) => store.selector);
+  const { className, qualities, setSelect } = useAppSelector(
+    (store) => store.selector
+  );
   const loader = useAppSelector((store) => store.loader.loading);
-  const className = useAppSelector((store) => store.class.className);
-
-  const setSelect = selection.set;
 
   const classFilter = (className: string) => {
     let cards;
 
-    cards = set?.filter(
-      (item) =>
-        item.playerClass ===
-        (className === "All" ? item.playerClass : className)
-    );
+    cards = set
+      ?.filter(
+        (item) =>
+          item.playerClass ===
+          (className === "All" ? item.playerClass : className)
+      )
+      .filter(
+        (item) =>
+          item.rarity === (qualities === "All" ? item.rarity : qualities)
+      );
     return cards;
   };
 
@@ -36,7 +40,11 @@ export const Main = () => {
 
   useEffect(() => {
     dispatch(setFilteredSet(classFilter(className)));
-  }, [className, set, dispatch]);
+  }, [className, set, dispatch, qualities]);
+
+  useEffect(() => {
+    console.log(qualities);
+  }, [qualities]);
 
   return (
     <div className={style.main}>

@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface ISelectorSlice {
-  set: string;
-  class: string;
-  rarity: string;
+  setSelect: string;
+  className: string;
+  qualities: string;
 }
 
 export const initialState: ISelectorSlice = {
-  set: "",
-  class: "",
-  rarity: "",
+  setSelect: "",
+  className: "All",
+  qualities: "All",
 };
 
 export const selectorSlice = createSlice({
@@ -18,19 +18,19 @@ export const selectorSlice = createSlice({
   reducers: {
     setSelectorSet: (state, action) => ({
       ...state,
-      set: action.payload,
+      setSelect: action.payload,
     }),
     setSelectorClass: (state, action) => ({
       ...state,
-      class: action.payload,
+      className: action.payload,
     }),
-    setSelectorRarity: (state, action) => ({
+    setSelectorQualities: (state, action) => ({
       ...state,
-      rarity: action.payload,
+      qualities: action.payload,
     }),
   },
 });
 
-export const { setSelectorSet, setSelectorClass, setSelectorRarity } =
+export const { setSelectorSet, setSelectorClass, setSelectorQualities } =
   selectorSlice.actions;
 export const selectorReducer = selectorSlice.reducer;
