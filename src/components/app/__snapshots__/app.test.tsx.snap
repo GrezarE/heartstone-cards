@@ -20,13 +20,16 @@ Object {
           >
             <div
               class="box"
+              data-testid="set-box"
             >
               <label
+                data-testid="set-label"
                 for="sets"
               >
                 Sets:
               </label>
               <select
+                data-testid="set-select"
                 id="sets"
               >
                 <option
@@ -197,13 +200,16 @@ Object {
         >
           <div
             class="box"
+            data-testid="set-box"
           >
             <label
+              data-testid="set-label"
               for="sets"
             >
               Sets:
             </label>
             <select
+              data-testid="set-select"
               id="sets"
             >
               <option

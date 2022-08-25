@@ -30,10 +30,10 @@ export const SetSelect = () => {
   };
 
   return (
-    <div className={style.box}>
-      <label htmlFor="sets">Sets:</label>
+    <div className={style.box} data-testid="set-box">
+      <label htmlFor="sets" data-testid="set-label">Sets:</label>
 
-      <select id="sets" value={value} onChange={changeValue}>
+      <select id="sets" value={value} onChange={changeValue} data-testid="set-select">
         <option value={MURDER_AT_CASTLE_NATHRIA}>
           Murder at Castle Nathria
         </option>
