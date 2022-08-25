@@ -4,4 +4,9 @@
 .card_box img {
   width: 375px;
   height: 518px;
+}
+.card_box:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+  transition: 0.5s;
 }/*# sourceMappingURL=card.module.css.map */

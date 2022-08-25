@@ -42,17 +42,13 @@ export const Main = () => {
     dispatch(setFilteredSet(classFilter(className)));
   }, [className, set, dispatch, qualities]);
 
-  useEffect(() => {
-    console.log(qualities);
-  }, [qualities]);
-
   return (
     <div className={style.main}>
       <SelectForm />
       <ul>
         {filteredSet &&
           filteredSet.map((item, index) => (
-            <Card cardImage={item.img} key={index} />
+            <Card cardImage={item.img} key={index} cardName={item.name}/>
           ))}
         {/* {set &&
           set.map((item, index) => <Card cardImage={item.img} key={index} />)} */}

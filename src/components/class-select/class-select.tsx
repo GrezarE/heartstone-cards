@@ -19,10 +19,17 @@ export const ClassSelect = () => {
   };
 
   return (
-    <div className={style.box}>
-      <label htmlFor="sets">Class:</label>
+    <div className={style.box} data-testid="class-box">
+      <label htmlFor="sets" data-testid="class-label">
+        Class:
+      </label>
 
-      <select id="sets" value={value} onChange={changeValue}>
+      <select
+        id="sets"
+        value={value}
+        onChange={changeValue}
+        data-testid="class-select"
+      >
         <option value={"All"}>All</option>
 
         {Object.values(classList).map((item, index) => (
