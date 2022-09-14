@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAppDispatch } from "../../services/hooks";
 import { setSelectorQualities } from "../../services/reducers/selectorSlice";
-import style from "./qualities-select.module.css";
+import style from "./qualities-select.module.scss";
 import { qualitiesList } from "../../utils/constants";
 
 export const QualitiesSelect = () => {

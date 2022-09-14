@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./select-form.module.css";
+import style from "./select-form.module.scss";
 import { SetSelect } from "../set-select/set-select";
 import { ClassSelect } from "../class-select/class-select";
 import { QualitiesSelect } from "../rarity-select/qualities-select";
