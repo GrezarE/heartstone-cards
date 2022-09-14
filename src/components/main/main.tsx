@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../services/hooks";
-import style from "./main.module.css";
+import style from "./main.module.scss";
 import { getSet } from "../../services/actions/getSet";
 import { Card } from "../card/card";
 import { SelectForm } from "../select-form/select-form";

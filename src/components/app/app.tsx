@@ -1,6 +1,7 @@
 import React from "react";
 import { Header } from "../header/header";
-import style from "./app.module.css";
+import style from "./app.module.scss";
+// import style from "./app.module.css";
 // import { Routes, Route } from "react-router-dom";
 import { Main } from "../main/main";
 

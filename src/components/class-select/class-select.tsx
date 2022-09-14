@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import style from "./class-select.module.css";
+import style from "./class-select.module.scss";
 import { classList } from "../../utils/constants";
 import { useAppDispatch } from "../../services/hooks";
 import { setSelectorClass } from "../../services/reducers/selectorSlice";

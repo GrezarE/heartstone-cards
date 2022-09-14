@@ -9,7 +9,7 @@ import {
   CORE,
 } from "../../utils/constants";
 import { setSelectorSet } from "../../services/reducers/selectorSlice";
-import style from "./set-select.module.css";
+import style from "./set-select.module.scss";
 
 export const SetSelect = () => {
   const dispatch = useAppDispatch();
